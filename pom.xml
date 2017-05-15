@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.hazelcast</groupId>
+    <artifactId>log-aggregator</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <properties>
+        <main.basedir>${project.basedir}</main.basedir>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jdk.version>1.8</jdk.version>
+        <maven.checkstyle.plugin.version>2.17</maven.checkstyle.plugin.version>
+        <log4j.version>1.2.12</log4j.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.hazelcast</groupId>
+            <artifactId>hazelcast-all</artifactId>
+            <version>3.8.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.hazelcast.jet</groupId>
+            <artifactId>hazelcast-jet</artifactId>
+            <version>0.4-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>annotations</artifactId>
+            <version>3.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+    </dependencies>
+
+
+</project>
